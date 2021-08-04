@@ -6,6 +6,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = options => ({
+  node: {
+    fs: 'empty',
+  },
   mode: options.mode,
   entry: options.entry,
   output: Object.assign(
